@@ -1,0 +1,94 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Layout</title>
+        <style>
+            * {
+                margin: 1;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+            body {
+                display: grid;
+                grid-template-areas:
+                    "header header"
+                    "nav article"
+                    "footer footer";
+                grid-template-columns: 1fr 2fr;
+                grid-template-rows: auto 1fr auto;
+                height: 100vh;
+                gap: 10px;
+                padding: 10px;
+                background-color: #f0f0f0;
+                border: 1px solid rgb(0, 0, 0);
+            }
+            
+            header {
+                grid-area: header;
+                background-color: #ffd6ad;
+                padding: 20px;
+                text-align: center;
+                border: 1px solid orange;
+            }
+    
+            nav {
+                grid-area: nav;
+                background-color: #ffd6ad;
+                padding: 20px;
+                border: 1px solid orange;
+            }
+    
+            .articles {
+                grid-area: article;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+    
+            .articles .article {
+                background-color: #ccffcc;
+                padding: 20px;
+                border: 1px solid #00ff00;
+                flex: 1;
+            }
+    
+            footer {
+                grid-area: footer;
+                background-color: #ffd6ad;
+                padding: 20px;
+                text-align: center;
+                border: 1px solid orange;
+            }
+        </style>
+    </head>
+    <body>
+    
+        <header>
+            <h1>Header</h1>
+        </header>
+    
+        <nav>
+            <p>Navigation</p>
+        </nav>
+    
+        <div class="articles">
+            <div class="article">
+                <p>Article</p>
+            </div>
+            <div class="article">
+                <p>Article</p>
+            </div>
+            <div class="article">
+                <p>Article</p>
+            </div>
+        </div>
+    
+        <footer>
+            <p>Footer</p>
+        </footer>
+    
+    </body>
+    </html>
